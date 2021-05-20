@@ -21,7 +21,7 @@ from base64 import b64encode, b64decode
 
 
 class SASL:
-    def __init__(self, username, password, base64=False, hash_name='sha256'):
+    def __init__(self, username, password, mechanism="PLAIN", base64=False, hash_name='sha256'):
         self.username = username.encode()
         self.password = sasl_prep(password).encode()
         self.mechanism = mechanism
